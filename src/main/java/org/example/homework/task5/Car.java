@@ -25,20 +25,29 @@ public class Car implements Drivable{
         return this.year;
     }
 
-    @Override
-    public void start() {
+    public void start(){
+        System.out.println("Start moving");
+    }
 
+    public void stop(){
+        System.out.println("Stop moving");
+    }
+
+    public void drive(int distance){
+        System.out.println("Drive " + distance + "km");
+    }
+
+    public void printCar() {
+        System.out.println("The car is " + this.toString());
     }
 
     @Override
-    public void stop() {
-
-    }
-
-    @Override
-    public void drive(int distance) {
-        System.out.println("Машина проехала " + distance + " км");
-
+    public String toString() {
+        return "Car{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", year=" + year +
+                '}';
     }
 
 
